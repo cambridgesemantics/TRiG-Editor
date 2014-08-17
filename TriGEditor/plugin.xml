@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="TriG File Editor"
+            extensions="trig"
+            icon="icons/sample.gif"
+            contributorClass="trigeditor.editors.BasicTriGEditorActionContributor"
+            class="trigeditor.editors.TriGEditor"
+            id="trigeditor.editors.TriGEditor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editorActions">
+         	<editorContribution
+         		id="trigeditor.editors.EditorAction"
+         		targetID="trigeditor.editors.TriGEditor">
+         		<action id="trigeditor.editors.EditorPrefixAction"
+         			label="Refactor Prefixes"
+         			toolbarPath="TriGEditor"
+         			icon="icons/sample.gif"
+         			tooltip="Refactor Prefixes"
+         			class="trigeditor.editors.EditorPrefixAction"
+         			definitionID="trigeditor.editors.EditorPrefixActionDef"
+         		/>
+         	</editorContribution>	
+   </extension>
+   
+</plugin>
